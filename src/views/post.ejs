@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta chaset="utf-8">
+        <meta name="author"content="walter">
+        <title>myPost</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <body>
+            <nav class="navbar navbar-dark bg-dark">
+                <a class="navbar-brand" href="/notes">Posts</a>
+                <a class="navbar-brand" href="/">Salir</a>
+            </nav>    
+            <br><center><h1>MyPost</h1></center>
+            <div class="card mb-3 mx-auto" style="max-width: 540px;">
+                 <div class="row no-gutters mx-auto">
+                    <div class="col-md-4 mx-auto">
+                        <img src="<%= users.path  %>" class="card-img" alt=" <%=  users.filename  %>">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                          <h5 class="card-title">Post De: </h5>
+                          <p class="card-text"><%=  users.user %></p>
+                          <h5 class="card-title">Creador Del Post: </h5>
+                          <p class="card-text"><%= users.name  %></p>
+                          <h5 class="card-title">Correo Del Creado: </h5>
+                          <p class="card-text"><%= users.email  %></p>
+                          <h3 class="card-subtitle">Escribir en este Post</h3>
+                          <form action="/note"method="POST">
+                                <label>Titulo</label>
+                                <input type="text"name="title"class="form-control"placeholder="Titulo De la Nota">
+                                <label>Post</label>
+                                <textarea class="form-control"name="note"placeholder="Escribe..."></textarea>
+                                <button class="btn btn-primary btn-block">Publicar</button>
+                          </form>
+                        </div>
+                    </div>
+                </div>
+            </div>        
+        </body>
+</html>

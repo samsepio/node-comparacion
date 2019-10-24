@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta chaset="utf-8">
+        <meta name="author"content="walter">
+        <title>myPost</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <body>
+            <nav class="navbar navbar-light bg-light">
+                <a class="navbar-brand" href="/">Inicio</a>
+                <a class="navbar-brand" href="/signup">Registrate</a>
+                <a class="navbar-brand" href="/signin">Iniciar Secion</a>
+            </nav>    
+            <br><center><h1>Registrate</h1></center>
+            <div class="card mx-auto" style="width: 18rem;">
+                <div class="card-body mx-auto">
+                    <form action="/signup"method="POST"enctype="multipart/form-data">
+                        <input type="file" name="image" class="custom-file-input" id="inputGroupFile02">
+                        <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Seleccionar Imagen</label>
+                        <label>Usuario</label>
+                        <input type="text"name="user"class="form-control"placeholder="Ingrese Un Usuario">
+                        <label>Correo</label>
+                        <input type="email"name="email"class="form-control"placeholder="Ingrese Su Correo">
+                        <label>Nombres</label>
+                        <input type="text"name="name"class="form-control"placeholder="Ingrese Su Nombre">
+                        <label>Contraseña</label>
+                        <input type="password"name="password"class="form-control"placeholder="Ingrese Su contraseña">
+                        <button class="btn btn-primary btn-block">Ingresar</button>
+                        <a class="card-link"href="/signin">Ya tengo Una Cuenta</a>
+                    </form>
+                </div>
+            </div>
+        </body>
+</html>

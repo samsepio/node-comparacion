@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta chaset="utf-8">
+        <meta name="author"content="walter">
+        <title>myPost</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <body>
+            <nav class="navbar navbar-light bg-light">
+                <a class="navbar-brand" href="/">Inicio</a>
+                <a class="navbar-brand" href="/signup">Registrate</a>
+                <a class="navbar-brand" href="/signin">Iniciar Secion</a>
+            </nav>    
+            <br><center><h1>Mypost</h1></center>
+            <% users.forEach(function (post) { %>
+            <div class="card">
+                <div class="card-header">
+                      Bienbenido:  <%=  post.name %>
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Post de:  <%=  post.user  %></h5>
+                </div>
+                <a class="btn btn-primary btn-block"href="/post/<%= post._id %>">Acceder Al Post</a>
+            </div>
+            <% }) %>
+    </body>
+</html>
